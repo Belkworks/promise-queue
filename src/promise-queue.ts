@@ -48,7 +48,7 @@ export class PromiseQueue {
 		task.spawn(() => this.dispatch());
 	}
 
-	push<T>(factory: PromiseFactory<T>, next?: boolean): Promise<T> {
+	push<T>(factory: PromiseFactory<T>, unshift?: boolean): Promise<T> {
 		return new Promise((resolve, reject, onCancel) => {
 			const fn = () => {
 				if (onCancel()) return Promise.resolve();
@@ -59,7 +59,7 @@ export class PromiseQueue {
 				return promise;
 			};
 
-			if (next) this.queue.unshift(fn);
+			if (unshift) this.queue.unshift(fn);
 			else this.queue.push(fn);
 
 			this.update();
