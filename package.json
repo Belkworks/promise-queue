@@ -1,6 +1,6 @@
 {
 	"name": "@belkworks/promise-queue",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"main": "out/init.lua",
 	"scripts": {
 		"build": "rbxtsc",
