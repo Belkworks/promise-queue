@@ -1,0 +1,37 @@
+{
+	"name": "@belkworks/promise-queue",
+	"version": "1.0.0",
+	"main": "out/init.lua",
+	"scripts": {
+		"build": "rbxtsc",
+		"watch": "rbxtsc -w",
+		"prepublishOnly": "pnpm run build"
+	},
+	"keywords": [
+		"rbxts",
+		"promise",
+		"queue"
+	],
+	"author": "safazi",
+	"license": "MIT ",
+	"types": "out/index.d.ts",
+	"files": [
+		"out",
+		"!**/*.tsbuildinfo"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"@rbxts/compiler-types": "2.1.0-types.1",
+		"@rbxts/types": "^1.0.731",
+		"@typescript-eslint/eslint-plugin": "^6.10.0",
+		"@typescript-eslint/parser": "^6.10.0",
+		"eslint": "^8.53.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-prettier": "^5.0.1",
+		"eslint-plugin-roblox-ts": "^0.0.36",
+		"prettier": "^3.0.3",
+		"typescript": "^5.2.2"
+	}
+}
