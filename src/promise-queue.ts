@@ -33,12 +33,12 @@ export class PromiseQueue {
 			return this.update();
 		}
 
-		running.add(
-			promise.finally(() => {
-				running.delete(promise);
-				this.update();
-			}),
-		);
+		running.add(promise);
+
+		promise.finally(() => {
+			running.delete(promise);
+			this.update();
+		});
 
 		this.update();
 	}
