@@ -15,7 +15,7 @@ export class PromiseQueue {
 
 	setConcurrency(concurrency: number) {
 		assert(concurrency >= 1, `queue concurrency must be >=1, got ${concurrency}`);
-		assert(concurrency === concurrency % 1, `queue concurrency must be an integer, got ${concurrency}`);
+		assert(concurrency % 1 === 0, `queue concurrency must be an integer, got ${concurrency}`);
 
 		this.concurrency = concurrency;
 		this.update();
